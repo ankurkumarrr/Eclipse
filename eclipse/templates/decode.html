@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>DECODE</title>
+    {% load static %}
+    <link rel="stylesheet" href=" {% static 'css/bootstrap.min.css' %} " type="text/css">
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}" ></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href=" {% static 'css/style.css' %}" type="text/css">
+  </head>
+
+  <body>
+
+    <div id="particles-js">
+      <div id="welcome" >
+        <div class="jumbotron">
+          <font color="white">
+          <h1 class="display-4">DECODE</h1>
+          <br>
+
+          <div class="input-group" style="height:100px;">
+            <div class="input-group-prepend">
+              <span class="input-group-text" style="background:black; height:100px;"><font color='white'>Enter Message</font></span>
+            </div>
+            <textarea class="form-control" aria-label="With textarea" style="background:black; height:100px;" name='message' disabled> {{ d_message }} </textarea>
+          </div>
+          <br>
+
+          <a href= "/media/{{ filename }}" download>
+            <button type="button" class="btn btn-outline-warning" id='db' {{ fs }}> {{ filess }} </button>
+          </a>
+
+          <button type="button"  class="btn btn-outline-success" onclick="location.href='../../eclipse' "> Back To Homepage </button>
+          </font>
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'js/particles.min.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+
+  </body>
+
+</html>

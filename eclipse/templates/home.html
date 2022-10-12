@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>Eclipse</title>
+    {% load static %}
+    <link rel="stylesheet" href=" {% static 'css/bootstrap.min.css' %} " type="text/css">
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}" ></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href=" {% static 'css/style.css' %}" type="text/css">
+  </head>
+
+  <body>
+
+    <div id="particles-js">
+      <div id="welcome" >
+        <div class="jumbotron">
+          <font color="white">
+          <h1 class="display-4">Welcome to Eclipse!</h1>
+          <p class="lead">A Simple tool to encode message and at the same time be able to archive a file into an image all protected by an authorisation code.</p>
+          <hr class="my-4">
+          <p>Read the T&C to continue >></p>
+          </font>
+          <!-- Button trigger modal -->
+
+          <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#Learn">
+            Learn More >
+          </button>
+
+          <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#tc">
+            Read Terms and Conditions >>
+          </button>
+
+
+
+          <!-- Modal Terms and Conditions -->
+          <div class="modal fade" id="tc" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalScrollableTitle">Terms And Conditions</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  ...TandC
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Nope!</button>
+                  <button type="button" class="btn btn-primary"  onclick="location.href='imageselection' " >Let's go!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal Learn More -->
+          <div class="modal fade" id="Learn" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalScrollableTitle">About Eclipse</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Made By Ankur Kumar
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Got It!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+    <script src="{% static 'js/particles.min.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+
+  </body>
+
+</html>

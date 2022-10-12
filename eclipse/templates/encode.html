@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>ENCODE</title>
+    {% load static %}
+    <link rel="stylesheet" href=" {% static 'css/bootstrap.min.css' %} " type="text/css">
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}" ></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href=" {% static 'css/style.css' %}" type="text/css">
+  </head>
+
+  <body>
+
+    <div id="particles-js">
+      <div id="welcome" >
+        <div class="jumbotron">
+          <font color="white">
+          <h1 class="display-4">ENCODE</h1>
+          <br>
+
+
+          <form method="POST" action="authcode" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="input-group" style="height:100px;">
+              <div class="input-group-prepend">
+                <span class="input-group-text" style="background:black; height:100px;"><font color='white'>Enter Message</font></span>
+              </div>
+              <textarea class="form-control" aria-label="With textarea" style="background:black; height:100px;" name='message' ></textarea>
+            </div>
+            <br>
+
+            <script>
+                $(function () {
+                    $('#Decode').attr("value", "N");
+
+                    $('#fileInput').change(function () {
+                        if ($('#fileInput').val().length == 0)
+                            $('#Decode').attr("value", "N");
+                        else
+                            $('#Decode').attr("value", "Y");
+                    });
+                });
+            </script>
+
+            <input id="fileInput" name="enfile" type="file" class="btn btn-dark"/><br><br>
+            <input id="Decode" value="N" class="btn btn-outline-success" name="status" style="height:1px; visibility:hidden;"></input>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1" style="background:black;"><font color='white'>Name of Encoded Image</font></span>
+              </div>
+              <input type="text" class="form-control" name="newname" style="background:black;" value="Encoded_Image">
+            </div>
+            <button id="Encode" type="submit"  class="btn btn-outline-danger" > Encode Image </button>
+
+          </form>
+
+
+          </font>
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'js/particles.min.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+
+  </body>
+
+</html>

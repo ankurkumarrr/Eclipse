@@ -1,0 +1,45 @@
+body
+{
+  margin:0;
+  padding: 0;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+
+}
+
+
+#particles-js
+{
+  background-color: black;
+  height: 100%;
+
+}
+
+
+
+#welcome{
+  background-color:transparent;
+  opacity:1;
+  padding:0;
+  border:0;
+  position:absolute;
+  top: 15%;
+  bottom: 40%;
+  left: 20%;
+  right: 20%;
+
+
+}
+
+
+.jumbotron{
+  background: transparent;
+  border-style:solid;
+  border-color: white;
+
+}
+
+.input-group{
+  background-color: black;
+}
